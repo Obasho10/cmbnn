@@ -17,7 +17,7 @@ def generator_loss(disc_generated_output, gen_output, target):
     l2_loss = torch.norm(r, p=2)
 
     # Total generator loss
-    total_gen_loss = gan_loss +  l1_loss + l2_loss
+    total_gen_loss = gan_loss + 100*l1_loss + l2_loss
 
     return total_gen_loss, gan_loss, l1_loss
 
